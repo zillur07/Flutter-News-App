@@ -29,7 +29,7 @@ class AllNewsComponent extends StatelessWidget with BaseController {
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 10),
                 child: Container(
-                  height: 400,
+                  height: 410,
                   width: Get.width,
                   decoration: BoxDecoration(
                     border:
@@ -81,36 +81,22 @@ class AllNewsComponent extends StatelessWidget with BaseController {
                             SizedBox(
                               height: 8,
                             ),
-                            Row(
-                              children: [
-                                // KText(
-                                //   text: item.author.toString(),
-                                //   overflow: TextOverflow.ellipsis,
-                                //   fontFamily: regular,
-                                //   fontSize: 12,
-                                //   color: black45,
-                                // ),
-                                Text(
-                                  item.author.toString(),
-                                  overflow: TextOverflow.ellipsis,
-                                  maxLines: 1,
-                                  softWrap: false,
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontFamily: regular,
-                                      color: black45),
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                KText(
-                                  text: DateFormat('dd-MM-yyyy : kk:mm:a')
-                                      .format(item.publishedAt as DateTime),
-                                  fontSize: 12,
+                            Text(
+                              item.author.toString(),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 1,
+                              softWrap: false,
+                              style: TextStyle(
+                                  fontSize: 13,
                                   fontFamily: regular,
-                                  color: black,
-                                ),
-                              ],
+                                  color: black45),
+                            ),
+                            KText(
+                              text: DateFormat('dd-MM-yyyy : kk:mm:a')
+                                  .format(item.publishedAt as DateTime),
+                              fontSize: 12,
+                              fontFamily: regular,
+                              color: black,
                             ),
                             Divider(color: Colors.grey),
                             KText(

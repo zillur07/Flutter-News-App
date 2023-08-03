@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:news_app/src/widget.dart/kText.dart';
 

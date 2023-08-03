@@ -245,7 +245,7 @@ class SingleNewsPage extends StatelessWidget with BaseController {
                       height: 15,
                     ),
                     Container(
-                      height: 300,
+                      height: 310,
                       child: ListView.builder(
                           shrinkWrap: true,
                           primary: false,
@@ -322,27 +322,21 @@ class SingleNewsPage extends StatelessWidget with BaseController {
                                             SizedBox(
                                               height: 8,
                                             ),
-                                            Row(
-                                              children: [
-                                                KText(
-                                                  text: item.author.toString(),
-                                                  fontFamily: regular,
-                                                  fontSize: 11,
-                                                  color: black45,
-                                                ),
-                                                SizedBox(
-                                                  width: 10,
-                                                ),
-                                                KText(
-                                                  text: DateFormat(
-                                                          'dd-MM-yyyy : kk:mm:a')
-                                                      .format(news.publishedAt
-                                                          as DateTime),
-                                                  fontSize: 11,
-                                                  fontFamily: regular,
-                                                  color: black,
-                                                ),
-                                              ],
+                                            KText(
+                                              text: item.author.toString(),
+                                              fontFamily: regular,
+                                              fontSize: 12,
+                                              maxLine: 1,
+                                              color: black45,
+                                            ),
+                                            KText(
+                                              text: DateFormat(
+                                                      'dd-MM-yyyy : kk:mm:a')
+                                                  .format(news.publishedAt
+                                                      as DateTime),
+                                              fontSize: 11,
+                                              fontFamily: regular,
+                                              color: black,
                                             ),
                                             Divider(color: Colors.grey),
                                             KText(
